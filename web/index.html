@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon-192.svg" />
+  <title>Speed-oh</title>
+  <link rel="stylesheet" href="/src/index.css" />
+</head>
+<body>
+  <div id="app">
+    <div id="splash" class="splash">
+      <h1>Speed-oh</h1>
+      <p>Install to Home Screen and tap to start</p>
+    </div>
+    <div id="driving-screen" class="driving-screen hidden">
+      <header class="header">
+        <button id="toggle-btn" class="toggle-btn">Start Driving</button>
+      </header>
+      <main class="speed-display">
+        <div class="current-speed-container">
+          <div id="current-speed" class="current-speed">--</div>
+          <div class="unit">km/h</div>
+        </div>
+        <div class="speed-limit-container">
+          <div class="speed-limit-label">Speed Limit</div>
+          <div id="speed-limit" class="speed-limit">--</div>
+        </div>
+      </main>
+      <div id="state-indicator" class="state-indicator"></div>
+      <div id="status" class="status"></div>
+      <footer class="footer">
+        <div id="road-name" class="road-name"></div>
+        <div class="disclaimer">
+          Road signs and legal limits take precedence. OSM data may be inaccurate.
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script type="module" src="/src/index.ts"></script>
+</body>
+</html>
